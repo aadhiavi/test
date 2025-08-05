@@ -1,0 +1,187 @@
+.project-nav {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 63px;
+    z-index: 99999999;
+}
+
+.project-main {
+    height: 100%;
+    width: 100%;
+    background-image: url(../../assets/project-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 100px;
+
+}
+
+.project-completed {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 30px;
+    flex-direction: column;
+
+    h1 {
+        width: 100%;
+        text-align: start;
+        color: rgb(255, 0, 0);
+        font-size: 33px;
+        font-weight: 500;
+    }
+
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .card-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        overflow: hidden;
+    }
+
+    .card {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        box-shadow:
+            inset 0px 0px 0px rgb(255, 255, 255),
+            /* Top-left corner */
+            inset 0px 0px 0px rgba(255, 255, 255),
+            /* Top-right corner */
+            inset 0px -464px 430px rgba(0, 0, 0, 0.304),
+            /* Bottom-left corner */
+            inset 0px 0px 0px rgba(255, 255, 255);
+        /* Bottom-right corner */
+        padding: 30px ;
+    }
+
+    .card-content {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .card h3 {
+        font-size: 24px;
+        color: white;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        cursor: pointer;
+
+    }
+}
+@media(max-width:1186px){
+    .project-completed {
+        .card-wrapper {
+
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+@media(max-width:900px){
+    .project-completed {
+        width: 100%;
+        padding: 0 20px;
+        .card-wrapper {
+            gap: 10px;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+@media(max-width:600px){
+    .project-completed {
+        width: 100%;
+        padding: 0 10px;
+        .card{
+            height: 250px;
+            padding: 30px 0;
+        }
+        .card h3 {
+            font-size: 18px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+    
+        }
+    }
+}
+
+.contact-card-projects {
+    h3 {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+
+    img {
+        height: 40px;
+        width: auto;
+        opacity: 1;
+    }
+
+    form {
+        input {
+            color: white;
+            padding-left: 5px;
+
+            &:hover {
+                background-color: #ffffff2a;
+            }
+        }
+
+        button {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            font-weight: 300;
+
+        }
+
+        button:hover {
+            background: black;
+            color: white;
+        }
+    }
+
+    ::-webkit-input-placeholder {
+        color: #ffffff;
+    }
+
+    .contact-icons {
+        a {
+            border: 1px solid rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+        }
+
+        a:hover {
+            background: rgb(0, 0, 0);
+            color: white;
+        }
+    }
+}

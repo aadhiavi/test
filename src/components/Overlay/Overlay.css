@@ -1,0 +1,122 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.675);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999999;
+    backdrop-filter: blur(3px);
+    transition: transform 0.3s ease;
+    padding-top: 100px;
+    color: white;
+    gap: 30px;
+
+    ul {
+        li {
+            color: white;
+            font-weight: 300;
+            margin-left: 29px;
+            font-size: 18px;
+            list-style: none;
+            position: relative;
+            a {
+                color: white;
+                font-weight: 300;
+                letter-spacing: 1px;
+                &:hover{
+                    text-decoration: underline;
+                    color: rgb(246, 255, 0) !important;
+                }
+            }
+
+        }
+
+        li::before {
+            content: '⇾';
+            position: absolute;
+            top: 0px;
+            left: -22px;
+        }
+    }
+
+
+}
+
+.overlay-content-list {
+    display: flex;
+    align-items: flex-end;
+    background: transparent;
+    gap: 15px;
+    margin-bottom: 70px;
+}
+
+/* .overlay-content-btn1,.overlay-content-btn2,.overlay-content-btn3,.overlay-content-btn4{
+    height: 80px;
+    width: 60px;
+} */
+
+.overlay-content-btn1 {
+    height: 90px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    color: white;
+}
+
+.overlay-content-btn2 {
+    height: 130px;
+    width: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    color: white;
+    margin-right: 5px;
+}
+
+.overlay-content-btn3 {
+    height: 130px;
+    width: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    color: white;
+    margin-left: 5px;
+}
+
+.overlay-content-btn4 {
+    height: 90px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    color: white;
+}
+
+.overlay-content-icon {
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+}

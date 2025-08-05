@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
+
+.tile-nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 63px;
+    z-index: 99999999;
+    background-color: rgb(48, 20, 0);
+}
+
+.tiles {
+    width: 100%;
+    background-color: rgb(255, 246, 234);
+    overflow: hidden;
+}
+
+
+/* ================================ */
+.tile-body-section {
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 70px 0;
+
+    .tile-body {
+        img {
+            height: 450px;
+            width: 450px;
+            object-fit: cover;
+        }
+    }
+}
+
+.tile-body1 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    width: 60%;
+
+    h2 {
+        color: rgb(104, 40, 0);
+        width: 100%;
+        text-align: start;
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-weight: 400;
+    }
+}
+
+.tile-body2 {
+    img {
+        height: 350px;
+    }
+}
+
+.tile-body-features {
+    width: 100%;
+    background-color: rgb(226, 213, 207);
+}
+
+.features-container {
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 100px 0;
+
+}
+
+.tile-body3 {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 400px;
+    }
+
+    h1 {
+        color: rgb(104, 40, 0);
+        width: 300px;
+        text-align: start;
+        font-size: 30px;
+        font-weight: 400;
+    }
+}
+
+.tile-features {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 2rem;
+
+    .feature-box {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+
+        span {
+            height: 65px;
+            width: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(104, 40, 0);
+            color: rgb(104, 40, 0);
+            font-size: 33px;
+            border-bottom: 8px solid rgb(104, 40, 0);
+        }
+
+        p {
+            width: 100px;
+            color: rgb(104, 40, 0);
+        }
+    }
+}
+
+
+
+
+
+/* ------------------------- */
+
+.tile-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+
+    .slide {
+        transition: all 0.5s ease;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .right {
+        animation: fadeRight 0.3s ease forwards;
+    }
+
+    .left {
+        animation: fadeLeft 0.3s ease forwards;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .slide-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+
+        h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            background: url('../../assets/tile2.jpg') no-repeat center;
+            background-size: cover;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(2px 2px 3px rgb(94, 53, 0));
+        }
+
+        p {
+            color: white;
+            font-size: 18px;
+        }
+
+        .slide-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            gap: 20px;
+
+            a {
+                padding: 5px 15px;
+                width: max-content;
+                border-radius: 5px;
+                background-color: red;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                color: white;
+            }
+        }
+
+    }
+
+    .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #0000002f;
+        color: #ffffffc6;
+        border: none;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        z-index: 10;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        box-shadow: inset 1px 1px 5px grey;
+    }
+
+    .nav-btn.left {
+        left: 50px;
+    }
+
+    .nav-btn.right {
+        right: 50px;
+    }
+}
+
+.tile-collections {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 50px auto;
+
+    .tile-card {
+        height: 370px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 148, 76, 0.478);
+        position: relative;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 1s ease;
+        }
+
+        .card-info {
+            display: none;
+        }
+    }
+
+    .tile-card:hover {
+        img {
+            transform: rotateY(180deg);
+            transition: transform 1s ease;
+        }
+
+        .card-info {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 15px;
+            background: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0.47), rgba(255, 255, 255, 0.208), transparent);
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            flex-direction: column;
+            gap: 15px;
+            animation: fadeBottom 0.3s ease forwards;
+
+            h3 {
+                color: rgb(0, 122, 0);
+                font-size: 25px;
+            }
+
+            p {
+                color: rgb(0, 100, 0);
+            }
+
+            a {
+                height: 40px;
+                width: 40px;
+                background-color: rgb(0, 166, 116);
+                color: rgb(255, 255, 255);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.tile-intro {
+    width: 80%;
+    margin: 70px auto;
+
+    h2 {
+        text-align: center;
+        color: rgb(75, 45, 0);
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "Libre Baskerville", serif;
+    }
+}
+
+@keyframes fadeBottom {
+    0% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 1;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =============catlog================== */
+.catlogs {
+    max-width: 1000px;
+    margin: 60px auto;
+
+    h1 {
+        text-align: center;
+        padding: 50px 0;
+        font-size: 40px;
+        font-family: "Libre Baskerville", serif;
+        font-weight: 400;
+    }
+
+    .main-image {
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 27px;
+        font-family: "Libre Baskerville", serif;
+        font-weight: 400;
+    }
+
+    .catlog-tile-intro {
+        padding: 10px 0;
+
+        h4 {
+            padding: 10px 0;
+            font-size: 20px;
+            font-family: "Libre Baskerville", serif;
+            font-weight: 400;
+        }
+
+        p {
+            color: rgb(42, 42, 42);
+        }
+
+        li {
+            margin-left: 25px;
+            color: rgb(42, 42, 42);
+            margin-bottom: 5px;
+        }
+
+        span {
+            color: rgb(194, 113, 0);
+        }
+    }
+
+    .catlog-tile-intro1 {
+        padding: 10px 0;
+
+        h4 {
+            padding: 10px 0;
+            font-size: 27px;
+            font-family: "Libre Baskerville", serif;
+            font-weight: 400;
+        }
+
+        .featured-tile {
+            margin: 15px 0;
+            height: 300px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-radius: 8px;
+            gap: 50px;
+
+            img {
+                height: 100%;
+                width: auto;
+                object-fit: contain;
+            }
+
+            p {
+                color: rgb(42, 42, 42);
+                margin-bottom: 10px;
+                font-size: 17px;
+                font-family: "Libre Baskerville", serif;
+                font-weight: 400;
+            }
+
+            li {
+                margin-left: 15px;
+                color: rgb(42, 42, 42);
+                margin-bottom: 5px;
+            }
+        }
+
+        .featured-tile.reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
+}
+
+
+
+@media(max-width:1440px) {
+    .tile-collections {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 50px auto;
+
+        .tile-card {
+            height: 370px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 148, 76, 0.478);
+            position: relative;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+                transition: transform 1s ease;
+            }
+
+            .card-info {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 15px;
+                background: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0.47), rgba(255, 255, 255, 0.208), transparent);
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+                flex-direction: column;
+                gap: 15px;
+                animation: fadeBottom 0.3s ease forwards;
+
+                h3 {
+                    color: rgb(0, 122, 0);
+                    font-size: 25px;
+                }
+
+                p {
+                    color: rgb(0, 100, 0);
+                }
+
+                a {
+                    height: 40px;
+                    width: 40px;
+                    background-color: rgb(0, 166, 116);
+                    color: rgb(255, 255, 255);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1297px) {
+    .features-container {
+        gap: 50px;
+    }
+
+    .tile-body3 {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 400px;
+        }
+
+        h1 {
+            width: 100%;
+            font-size: 25px;
+        }
+    }
+}
+
+@media(max-width:1140px) {
+    .tile-body-section {
+        flex-direction: column;
+
+        .tile-body {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .tile-body1 {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .tile-body2 {
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .tile-features {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 10px;
+
+        .feature-box {
+            gap: 10px;
+        }
+    }
+}
+
+@media(max-width:1024px) {
+    .tile-slider {
+        .slide-info {
+            max-width: 80%;
+            min-width: 300px;
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        .nav-btn {
+            height: 40px;
+            width: 40px;
+        }
+
+        .nav-btn.left {
+            left: 10px;
+        }
+
+        .nav-btn.right {
+            right: 10px;
+        }
+    }
+
+    .catlogs {
+        max-width: 100%;
+        margin: 60px auto;
+        padding: 15px;
+
+        h1 {
+            font-size: 30px;
+        }
+
+        h3 {
+            font-size: 23px;
+        }
+
+        .catlog-tile-intro1 {
+            padding: 10px 0;
+
+            h4 {
+                padding: 10px 0;
+                font-size: 27px;
+                font-family: "Libre Baskerville", serif;
+                font-weight: 400;
+            }
+
+            .featured-tile {
+                height: 100%;
+                justify-content: space-between;
+                flex-direction: column;
+                border: 1px solid grey;
+            }
+        }
+
+    }
+}
+
+@media(max-width:960px) {
+    .features-container {
+        gap: 25px;
+    }
+
+    .tile-body3 {
+        img {
+            height: 270px;
+        }
+
+        h1 {
+            width: 100%;
+            font-size: 25px;
+        }
+    }
+}
+
+@media(max-width:637px) {
+    .features-container {
+        gap: 25px;
+    }
+
+    .tile-body3 {
+        img {
+            height: auto;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 21px;
+        }
+    }
+}
+
+@media(max-width:515px) {
+    .tile-body-section {
+        padding: 50px 10px;
+        width: 100%;
+
+        .tile-body {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .tile-body1 {
+        width: 100%;
+    }
+
+    .features-container {
+        width: 100%;
+        padding: 80px 10px;
+    }
+}
