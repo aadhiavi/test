@@ -23,7 +23,7 @@ import NavbarTest from './components/navbar/NavbarTest';
 import Admin from './pages/Admin/Admin';
 import Tiles from './pages/Tiles/Tiles';
 import TileCatalog from './pages/Tiles/TileCatlog';
-import { tileRoutes } from './pages/Tiles/content';
+import { tileRoutes } from './pages/Tiles/Data';
 
 
 function App() {
