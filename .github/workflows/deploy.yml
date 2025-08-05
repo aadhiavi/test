@@ -18,8 +18,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm install
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
 
       - name: Build Vite app
         run: npm run build
@@ -33,4 +35,6 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           protocol: ftp
           local-dir: dist
-          server-dir: ${{ secrets.FTP_TARGET_DIR }}/
+          server-dir: public_html/
+          cleanup: true
+
