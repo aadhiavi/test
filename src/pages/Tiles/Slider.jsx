@@ -15,7 +15,6 @@ import Img11 from '../../assets/slide (7).jpg'
 import Img12 from '../../assets/slide (13).jpg';
 
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import { IoDocumentTextOutline } from 'react-icons/io5';
 
 
