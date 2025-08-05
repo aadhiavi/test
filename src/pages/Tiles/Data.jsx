@@ -88,25 +88,6 @@ import Image123 from '../../assets/1213.jpg';
 import Image124 from '../../assets/1214.jpg';
 import Image125 from '../../assets/1215.jpg';
 
-
-
-
-export const routes = [
-    { route: "carvoss-collection" },
-    { route: "glosssy-endless-collection" },
-    { route: "glossy-tile-collection" },
-    { route: "gvt-carving-Endless" },
-    { route: "highglass-collection" },
-    { route: "lignea-collection" },
-    { route: "colorplay-collection" },
-    { route: "embossed-collection" },
-    { route: "gvt" },
-    { route: "mystic-shades" },
-    { route: "statuario-series" },
-    { route: "double-charge" },
-]
-
-
 export const tileRoutes = [
     {
         Img: Img1,
