@@ -16,6 +16,7 @@ import Img12 from '../../assets/slide (13).jpg';
 
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { IoDocumentTextOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 
 
@@ -176,9 +177,9 @@ const Slider = () => {
                             <a href={images[current].link} target="_blank" rel="noopener noreferrer">
                                 View <IoDocumentTextOutline />
                             </a>
-                            <a href={images[current].url} target="_blank" rel="noopener noreferrer">
+                            <Link to={images[current].url}>
                                 Got to Page <FaAngleRight />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -204,9 +205,9 @@ const Slider = () => {
                                     <a href={item.link} target="_blank" rel="noopener noreferrer">
                                         <IoDocumentTextOutline />
                                     </a>
-                                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                                    <Link to={item.url}>
                                         <FaAngleRight />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
